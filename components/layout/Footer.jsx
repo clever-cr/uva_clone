@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { React, useState, useEffect } from "react";
+import { BsChevronUp } from "react-icons/bs";
 import FooterContact from "../ui/FooterContact";
 import {
   FaFacebookF,
@@ -34,11 +35,17 @@ const Footer = () => {
       <Wrapper>
         <div className=" pt-[36px]">
           <div className=" sm:px-3 ">
-            <Image
-              className="w-[317px] h-[35px] object-cover"
-              src={logo}
-              alt=""
-            />
+            <div className="flex items-center justify-between">
+              <Image
+                className="w-[317px] h-[35px] object-cover"
+                src={logo}
+                alt=""
+              />
+              <div className="p-2 bg-[#E6E6E6] rounded-[2px]">
+                <BsChevronUp className="text-white-" />
+              </div>
+            </div>
+
             <div className="grid grid-cols-4 pt-[48px] pb-[53px] sm:grid-cols-1">
               <FooterContact
                 titles={["Education & Research"]}

@@ -26,7 +26,7 @@ const Hero = () => {
         <div className="pt-[72px] py-[64px]  sm:px-3- sm:pt-[100px] sm:pb-[64px]">
           <div className="flex justify-between sm:flex-col sm:gap-y-[24px]">
             <div className="pt-[72px] sm:pt-2">
-              <h1 className="text-[42px] font-semibold leading-[59px] text-primary">
+              <h1 className="text-[42px] font-semibold leading-[59px] text-primary ">
                 University of Amsterdam
               </h1>
               <p className="text-[28px] sm:text-2xl leading-[45px] text-primary ">
