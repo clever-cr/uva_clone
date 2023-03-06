@@ -31,6 +31,8 @@ module.exports = {
 
       },
       boxShadow: {
+        mini: "0 0 10px rgb(0 0 0 / 15%)",
+        small: "0 2px 10px rgb(0 0 0 / 15%)",
         medium: "0 10px 20px rgb(0 0 0 / 15%), 0 5px 15px rgb(0 0 0 / 25%)"
       }
     },
