@@ -45,7 +45,7 @@ const Hero = () => {
             <div className="w-[547px] h-[500px] bg-[#F7F7F7] absolute right-[60px] -bottom-[16px] sm:hidden"></div>
           </div>
           <Image
-            className="fixed right-0 top-[300px] w-[50px] object-cover z-50"
+            className="fixed right-0 top-[300px] w-[40px] object-cover z-50"
             src={feedback}
             alt=""
           />
