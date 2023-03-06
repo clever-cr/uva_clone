@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import { React, useState, useEffect } from "react";
 import FooterContact from "../ui/FooterContact";
 import {
   FaFacebookF,
@@ -9,14 +9,31 @@ import {
   FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa";
+
 import logo from "/public/images/black.png";
 import Wrapper from "./Wrapper";
 const Footer = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
+  const whenIsOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    const handleWidth = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleWidth);
+    return () => {
+      window.removeEventListener("resize", handleWidth);
+    };
+  }, []);
   return (
     <div className="bg-[#1F1D20] px-[68px] sm:px-0">
       <Wrapper>
         <div className=" pt-[36px]">
-          <div className=" sm:px-3">
+          <div className=" sm:px-3 ">
             <Image
               className="w-[317px] h-[35px] object-cover"
               src={logo}
@@ -74,7 +91,19 @@ const Footer = () => {
               />
             </div>
           </div>
-
+          {/* <div>
+            {["Education&Research", "Go to", "Information", "Contact"].map(
+              (item, index) => {
+                return (
+                  <div key={index}>
+                    {" "}
+                    <h2>{item}</h2>
+                    <AiOutlineDown />
+                  </div>
+                );
+              }
+            )}
+          </div> */}
           <div className="flex items-center justify-between border-t px-[68px]- py-[33px] sm:flex-col-reverse sm:px-5 sm:border-none sm:pt-0 sm:pb-24px sm:gap-y-[25px]">
             <div className="text-[#d6d6d6] flex gap-x-[15px]  ">
               <p>Copyright UvA 2023</p>

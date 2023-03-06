@@ -4,8 +4,8 @@ import React from "react";
 const NewsCard = ({ img, title, description }) => {
   return (
     <div>
-      <div className=" group">
-        <div className="flex flex-col gap-y-[12px]  group-hover:shadow-medium border w-[334px] h-[460px] bg-white sm:w-[253px] sm:h-[468px]">
+      <div className=" group pb-[20px]">
+        <div className="flex flex-col gap-y-[12px]  group-hover:shadow-medium border w-[334px] h-[460px]     bg-white sm:w-[253px] sm:h-[468px]">
           <Image
             src={img}
             alt="image"

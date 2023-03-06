@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import { AiOutlineRight, AiOutlineDown } from "react-icons/ai";
 const FooterContact = ({ titles = [], links = [] }) => {
   return (
@@ -6,9 +6,13 @@ const FooterContact = ({ titles = [], links = [] }) => {
       <div>
         {titles.map((title, index) => {
           return (
-            <div key={index} className="flex items-center justify-between">
-              <p className="text-base leading-[16px] font-semibold ">{title}</p>
-              <AiOutlineDown className="hidden sm:block" />
+            <div key={index} className="">
+              <div className="flex items-center justify-between">
+                <p className="text-base leading-[16px] font-semibold ">
+                  {title}
+                </p>
+                <AiOutlineDown className="hidden sm:block" />
+              </div>
             </div>
           );
         })}
