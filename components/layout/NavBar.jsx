@@ -10,6 +10,10 @@ import Wrapper from "./Wrapper";
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+    return () => (document.body.style.overflow = "scroll");
+  });
   const MenuOpen = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -113,13 +117,109 @@ const NavBar = () => {
                   {" "}
                   {link}
                 </Link>
+                <div
+                  className={`absolute top-[140px] z-50 bg-[#F7F7F7]   h-56 w-[300px]  ${
+                    index == 0 ? "hidden group-hover:block" : "hidden"
+                  }`}
+                >
+                  <div className="flex flex-col px-5 gap-[12px] pt-[12px]">
+                    {[
+                      "Bachelor's",
+                      "Master's",
+                      "Professional development",
+                      "Summer School",
+                      "Open programmes",
+                      "Exchange",
+                    ].map((item, index) => {
+                      return (
+                        <Link
+                          className="hover:text-secondary hover:border-b-secondary w-fit border-b border-transparent"
+                          href="page1"
+                          key={index}
+                        >
+                          {item}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+                <div
+                  className={`absolute top-[140px] z-50 bg-[#F7F7F7]   h-56- w-[300px]  ${
+                    index == 1 ? "hidden group-hover:block" : "hidden"
+                  }`}
+                >
+                  <div className="flex flex-col px-5 gap-[12px] pt-[12px]">
+                    {["Research at the UvA", "PhD"].map((item, index) => {
+                      return (
+                        <Link
+                          className="hover:text-secondary hover:border-b-secondary w-fit border-b border-transparent"
+                          href="page1"
+                          key={index}
+                        >
+                          {item}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+                <div
+                  className={`absolute top-[140px] z-50 bg-[#F7F7F7]   h-56 w-[300px]  ${
+                    index == 2 ? "hidden group-hover:block" : "hidden"
+                  }`}
+                >
+                  <div className="flex flex-col px-5 gap-[12px] pt-[12px]">
+                    {[
+                      "News",
+                      "  Events",
+                      "Press Office",
+                      " Coronavirus information",
+                      "Ukraine information and support",
+                    ].map((item, index) => {
+                      return (
+                        <Link
+                          className="hover:text-secondary hover:border-b-secondary w-fit border-b border-transparent"
+                          href="page1"
+                          key={index}
+                        >
+                          {item}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+                <div
+                  className={`absolute top-[140px] z-50 bg-[#F7F7F7]   h-56 w-[300px]  ${
+                    index == 3 ? "hidden group-hover:block" : "hidden"
+                  }`}
+                >
+                  <div className="flex flex-col px-5 gap-[12px] pt-[12px]">
+                    {[
+                      " About the University",
+                      "Alumni",
+                      " Contact and locations",
+                      "Organisation",
+                      " Policy and regulations",
+                      " Working at the UvA",
+                    ].map((item, index) => {
+                      return (
+                        <Link
+                          className="hover:text-secondary hover:border-b-secondary w-fit border-b border-transparent"
+                          href="page1"
+                          key={index}
+                        >
+                          {item}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             );
           })}
         </div>
       </div>
       {isMenuOpen && (
-        <div className="bg-[#D6D6D6] h-[300px] hidden sm:block absolute z-50 w-full top-[80px]">
+        <div className="bg-[#D6D6D6] h-[300px] hidden sm:block a fixed z-50 w-full top-[80px] ">
           <div>
             <div className="flex items-center px-[30px] text-secondary">
               <BsArrowRight />

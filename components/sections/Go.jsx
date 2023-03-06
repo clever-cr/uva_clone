@@ -20,7 +20,7 @@ const Go = () => {
             ].map((item, index) => {
               return (
                 <div key={index} className="group font-serif">
-                  <div className="w-[445px] h-[81px] sm:w-full border  sm:text-lg group-hover:shadow-medium text-2xl leading-[29px] text-primary font-semibold p-5 rounded-[2px] group-hover:text-secondary group-hover:underline">
+                  <div className="w-[445px] h-[81px] sm:w-full border  sm:text-lg group-hover:shadow-medium text-2xl leading-[29px] text-primary font-semibold p-5 rounded-[2px] group-hover:text-secondary group-hover:underline decoration-1 underline-offset-8">
                     {item}
                   </div>
                 </div>

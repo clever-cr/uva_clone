@@ -12,7 +12,7 @@ const NewsCard = ({ img, title, description }) => {
             className="w-full h-[136px] object-cover"
           />
           <div className="flex flex-col px-3 gap-y-[12px]">
-            <h2 className="text-2xl sm:text-lg leading-[29px] text-primary font-semibold group-hover:text-secondary group-hover:underline group-hover:border-secondary group-hover:w-fit ">
+            <h2 className="text-2xl sm:text-lg leading-[29px] text-primary font-semibold group-hover:text-secondary group-hover:underline group-hover:border-secondary group-hover:w-fit decoration-1 underline-offset-[6px]">
               {title}
             </h2>
             <p className="text-base leading-[29px]" href="#">
