@@ -50,7 +50,7 @@ const Hero = () => {
             alt=""
           />
 
-          <div className="flex gap-[12px] absolute bottom-[111px] sm:bottom-[55px]  z-10 sm:flex-col  sm:px-5">
+          <div className="flex gap-[12px] absolute bottom-[111px] sm:-bottom-[170px]  z-10 sm:flex-col  sm:px-5">
             {datas.map((data, index) => {
               return (
                 <div
