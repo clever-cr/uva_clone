@@ -2,6 +2,7 @@ import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import Wrapper from "../layout/Wrapper";
 import Image from "next/image";
+import feedback from "/public/images/feedback.png";
 
 import people from "/public/images/bachelorweek-vj-2023.webp";
 import van from "/public/images/Universiteit+van+Amsterdam+shoot+17012023-0176-flip-cropped-hi.jpeg";
@@ -43,6 +44,11 @@ const Hero = () => {
             </div>
             <div className="w-[547px] h-[500px] bg-[#F7F7F7] absolute right-[60px] -bottom-[16px] sm:hidden"></div>
           </div>
+          <Image
+            className="fixed right-0 top-[300px] w-[50px] object-cover z-50"
+            src={feedback}
+            alt=""
+          />
 
           <div className="flex gap-[12px] absolute bottom-[111px] sm:bottom-[55px]  z-10 sm:flex-col  sm:px-5">
             {datas.map((data, index) => {
